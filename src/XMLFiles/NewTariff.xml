@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:tariff_container xmlns:ns1="http://www.tariff.com/XSD">
+    <ns1:tariff_name tariff_name="Super MTS">
+        <ns1:operator1>MTS</ns1:operator1>
+        <ns1:payroll>40</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.5" outside_network="0.75"/>
+        <ns1:sms_price>0.3</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>3</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="Free">
+        <ns1:operator2>Kyivstar</ns1:operator2>
+        <ns1:payroll>30</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.2" outside_network="1"/>
+        <ns1:sms_price>0.2</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>2</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_minute</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="Bad operator">
+        <ns1:operator3>Life</ns1:operator3>
+        <ns1:payroll>20</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="1" outside_network="1"/>
+        <ns1:sms_price>0</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>0</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_fifth_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>15</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="Vip">
+        <ns1:operator1>MTS</ns1:operator1>
+        <ns1:payroll>40</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.5" outside_network="0.75"/>
+        <ns1:sms_price>0.3</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>3</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="Expensive">
+        <ns1:operator2>Kyivstar</ns1:operator2>
+        <ns1:payroll>30</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.2" outside_network="1"/>
+        <ns1:sms_price>0.2</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>2</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_minute</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="Good operator">
+        <ns1:operator3>Life</ns1:operator3>
+        <ns1:payroll>20</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="1" outside_network="1"/>
+        <ns1:sms_price>0</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>0</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_fifth_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>15</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="uper MTS">
+        <ns1:operator1>MTS</ns1:operator1>
+        <ns1:payroll>40</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.5" outside_network="0.75"/>
+        <ns1:sms_price>0.3</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>3</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="ree">
+        <ns1:operator2>Kyivstar</ns1:operator2>
+        <ns1:payroll>30</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="0.2" outside_network="1"/>
+        <ns1:sms_price>0.2</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>2</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_first_minute</ns1:tarrifiaction_type>
+            <ns1:tariff_price>10</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+    <ns1:tariff_name tariff_name="ad operator">
+        <ns1:operator3>Life</ns1:operator3>
+        <ns1:payroll>20</ns1:payroll>
+        <ns1:call_prices inside_network="0" another_network="1" outside_network="1"/>
+        <ns1:sms_price>0</ns1:sms_price>
+        <ns1:additional_prices>
+            <ns1:discount_numbers>0</ns1:discount_numbers>
+            <ns1:tarrifiaction_type>from_fifth_second</ns1:tarrifiaction_type>
+            <ns1:tariff_price>15</ns1:tariff_price>
+        </ns1:additional_prices>
+    </ns1:tariff_name>
+</ns1:tariff_container>

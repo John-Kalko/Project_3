@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+Tariffications XSD
+-->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.tariff.com/XSD"
+           xmlns:tns="http://www.tariff.com/XSD"
+           elementFormDefault="qualified">
+    <!-- Global entities, that represent mobile operators -->
+    <element id="MTS" name="operator1" type="string" fixed="MTS"/>
+    <element id="Kyivstar" name="operator2" type="string" fixed="Kyivstar"/>
+    <element id="Life" name="operator3" type="string" fixed="Life"/>
+
+    <!-- Global types -->
+    <simpleType id="name_pattern" name="name_pattern">
+        <restriction base="string">
+            <pattern id="tariff_name_pattern" value="[A-Z][A-Za-z0-9_]*"/>
+        </restriction>
+    </simpleType>
+
+    <!-- Elements -->
+    <!-- Root element -->
+    <element id="tariff" name="tariff">
+        <complexType>
+            <sequence>
+                <element ref="tns:tariff_name" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    
+    <!-- Consists all inforamtion about single tariff -->
+    <element id="tariff_name" name="tariff_name">
+        <complexType>
+            <sequence>
+                <choice>
+                <element ref="tns:operator1" maxOccurs="1"/>
+                <element ref="tns:operator2" maxOccurs="1"/>
+                <element ref="tns:operator3" maxOccurs="1"/>
+                </choice>
+                <element ref="tns:payroll" maxOccurs="1"/>
+                <element ref="tns:call_prices" maxOccurs="1"/>
+                <element ref="tns:sms_price" maxOccurs="1"/>
+                <element ref="tns:additional_prices" maxOccurs="1"/>
+            </sequence>
+            <attribute name="tariff_name" type="string" use="required"/>
+        </complexType>
+    </element>
+    
+    <!-- Price per month -->
+    <element id="payroll" name="payroll">
+        <simpleType>
+            <restriction base="decimal"/>
+        </simpleType>
+    </element>
+    
+    <!-- Call prices -->
+    <element id="call_prices" name="call_prices">
+        <complexType>
+            <attribute name="inside_network" type="decimal" use="required"/>
+            <attribute name="another_network" type="decimal" use="required"/>
+            <attribute name="outside_network" type="decimal" use="required"/>
+        </complexType>
+    </element>
+    
+    <!-- Sms price -->
+    <element id="sms_price" name="sms_price">
+        <simpleType>
+            <restriction base="decimal"/>
+        </simpleType>
+    </element>
+    
+    <!-- Additional prices -->
+    <element id="additional_prices" name="additional_prices">
+        <complexType>
+            <sequence>
+                <element ref="tns:discount_numbers" maxOccurs="1"/>
+                <element ref="tns:tarrifiaction_type" maxOccurs="1"/>
+                <element ref="tns:tariff_price" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+    
+    <!-- From additional prices -->
+    <element id="discount_numbers" name="discount_numbers">
+        <simpleType>
+            <restriction base="decimal"/>
+        </simpleType>
+    </element>
+    
+    <!-- From additional prices -->
+    <element id="tarrifiaction_type" name="tarrifiaction_type">
+        <simpleType>
+            <restriction base="string">
+                <enumeration value="from_first_second"/>
+                <enumeration value="from_fifth_second"/>
+                <enumeration value="from_first_minute"/>
+            </restriction>
+        </simpleType>
+    </element>
+
+    <!-- From additional prices -->
+    <element id="tariff_price" name="tariff_price">
+        <simpleType>
+            <restriction base="decimal"/>
+        </simpleType>
+    </element>
+</schema>
